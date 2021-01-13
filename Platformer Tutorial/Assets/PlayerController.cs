@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     {
         float hdirection = Input.GetAxis("Horizontal");
 
-        transform.Rotate()transform.Rotate(transform.rotation.x, transform.rotation.y, 0)
+        transform.Rotate(transform.rotation.x, transform.rotation.y, 0);
         if(hdirection < 0)
         {
             rb.velocity = new Vector2(-5, rb.velocity.y);
