@@ -23,13 +23,18 @@ public class CharacterMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(5, rb.velocity.y);
             transform.localScale = new Vector2((float)0.33351, transform.localScale.y);
-        } else 
-        {
-        }
-        if(Input.GetButtonDown("Jump"))
+        } 
+        else if(Input.GetButtonDown("Jump"))
         {
             rb.velocity = new Vector2(rb.velocity.x, 10);
+
         }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+
+        }
+
     }
     
 }
