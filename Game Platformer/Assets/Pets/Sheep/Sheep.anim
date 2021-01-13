@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sheep
+  m_Name: sheep
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 3fc526f40a4e74ed0b2fbf51f5161166, type: 3}
+      value: {fileID: 21300000, guid: 18f3a5648efc04f648e064ac0d62876a, type: 3}
     - time: 0.083333336
-      value: {fileID: 21300000, guid: c69f1060c91f542fcb41e5f68a51e817, type: 3}
+      value: {fileID: 21300000, guid: ba75f2e92c54949fe8405d8313aacafc, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,8 +42,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 3fc526f40a4e74ed0b2fbf51f5161166, type: 3}
-    - {fileID: 21300000, guid: c69f1060c91f542fcb41e5f68a51e817, type: 3}
+    - {fileID: 21300000, guid: 18f3a5648efc04f648e064ac0d62876a, type: 3}
+    - {fileID: 21300000, guid: ba75f2e92c54949fe8405d8313aacafc, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
