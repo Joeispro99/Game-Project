@@ -38,6 +38,7 @@ public class CharacterMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, 7);
 
         }
+        //Void (if it foes below y - 8)
         if(transform.position.y < -8)
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
