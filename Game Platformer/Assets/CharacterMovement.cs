@@ -31,12 +31,12 @@ public class CharacterMovement : MonoBehaviour
         if(hdirection < 0)
         {
             rb.velocity = new Vector2(-5, rb.velocity.y);
-            transform.localScale = new Vector2(-1*(float)0.33351, transform.localScale.y);
+            transform.localScale = new Vector2(-1*(float)0.3, transform.localScale.y);
         }
         else if(hdirection > 0)
         {
             rb.velocity = new Vector2(5, rb.velocity.y);
-            transform.localScale = new Vector2((float)0.33351, transform.localScale.y);
+            transform.localScale = new Vector2((float)0.3, transform.localScale.y);
         } 
         else
         {
