@@ -21,6 +21,8 @@ public class PetMovement : MonoBehaviour
             transform.position = new Vector3(charactertransform.transform.position.x + (float)1.5, charactertransform.transform.position.y - (float)0.3, charactertransform.transform.position.z);
             rb.velocity = new Vector2(characterrb.velocity.x, characterrb.velocity.y);
             transform.localScale = new Vector2((float)0.38865, transform.localScale.y);
+            
+            
         } else 
         {
             rb.velocity = new Vector2(characterrb.velocity.x, characterrb.velocity.y);
