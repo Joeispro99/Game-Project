@@ -7,6 +7,7 @@ public class CharacterMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Collider2D coll;
+    public float addGrav;
     [SerializeField] private LayerMask ground;
     private void Start()
     {
@@ -36,6 +37,11 @@ public class CharacterMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground))
         {
             rb.velocity = new Vector2(rb.velocity.x, 7);
+            //rb.gravityScale = addGrav;
+        }
+        else if(Input.GetButtonDown("Jump"))
+        {
+            //rb.gravityScale = addGrav;
 
         }
         //Void (if it foes below y - 8)
