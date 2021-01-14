@@ -37,6 +37,10 @@ public class CharacterMovement : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
 
         }
+        if (Input.GetKeyDown("w") && coll.IsTouchingLayers(ground))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 7);
+        }
         if(Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground))
         {
             rb.velocity = new Vector2(rb.velocity.x, 7);
