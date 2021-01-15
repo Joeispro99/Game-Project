@@ -41,18 +41,15 @@ public class CharacterMovement : MonoBehaviour
         else
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
-
         }
-        if (Input.GetKeyDown("w") && coll.IsTouchingLayers(ground))
+        if (Input.GetButtonDown("Jump") || Input.GetKeyDown("w") && coll.IsTouchingLayers(ground))
         {
             rb.velocity = new Vector2(rb.velocity.x, 7);
         }
-        if(Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground))
-        {
-            rb.velocity = new Vector2(rb.velocity.x, 7);
-
+        if (Input.GetKey("up")){
+            rb.velocity = new Vector2(rb.velocity.y, 7);
         }
-        if(Input.GetAxis("Fire1") > 0) 
+        if (Input.GetAxis("Fire1") > 0) 
         {
             state = witchState.fire;
         }
