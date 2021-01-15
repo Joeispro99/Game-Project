@@ -31,28 +31,27 @@ public class CharacterMovement : MonoBehaviour
         if(hdirection < 0)
         {
             rb.velocity = new Vector2(-5, rb.velocity.y);
-            transform.localScale = new Vector2(-1*(float)0.33351, transform.localScale.y);
+            transform.localScale = new Vector2(-1*(float)0.3, transform.localScale.y);
         }
         else if(hdirection > 0)
         {
             rb.velocity = new Vector2(5, rb.velocity.y);
-            transform.localScale = new Vector2((float)0.33351, transform.localScale.y);
+            transform.localScale = new Vector2((float)0.3, transform.localScale.y);
         } 
         else
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
-
         }
-        if (Input.GetKeyDown("w") && coll.IsTouchingLayers(ground))
+        //if (Input.GetButtonDown("Jump") || Input.GetKeyDown("w") && coll.IsTouchingLayers(ground))
+        //ur shitty code doesnt work
+        if (Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground))
         {
             rb.velocity = new Vector2(rb.velocity.x, 7);
         }
-        if(Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground))
-        {
-            rb.velocity = new Vector2(rb.velocity.x, 7);
-
+        if (Input.GetKey("up") && coll.IsTouchingLayers(ground)){
+            rb.velocity = new Vector2(rb.velocity.y, 7);
         }
-        if(Input.GetAxis("Fire1") > 0) 
+        if (Input.GetAxis("Fire1") > 0) 
         {
             state = witchState.fire;
         }
@@ -88,7 +87,7 @@ public class CharacterMovement : MonoBehaviour
         {
             state = witchState.lightning;
         }
-        if(transform.position.y < -8)
+        if(transform.position.y < -20)
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(currentSceneName);
