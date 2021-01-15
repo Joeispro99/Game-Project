@@ -42,11 +42,13 @@ public class CharacterMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
-        if (Input.GetButtonDown("Jump") || Input.GetKeyDown("w") && coll.IsTouchingLayers(ground))
+        //if (Input.GetButtonDown("Jump") || Input.GetKeyDown("w") && coll.IsTouchingLayers(ground))
+        //ur shitty code doesnt work
+        if (Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground))
         {
             rb.velocity = new Vector2(rb.velocity.x, 7);
         }
-        if (Input.GetKey("up")){
+        if (Input.GetKey("up") && coll.IsTouchingLayers(ground)){
             rb.velocity = new Vector2(rb.velocity.y, 7);
         }
         if (Input.GetAxis("Fire1") > 0) 
@@ -85,7 +87,7 @@ public class CharacterMovement : MonoBehaviour
         {
             state = witchState.lightning;
         }
-        if(transform.position.y < -8)
+        if(transform.position.y < -20)
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(currentSceneName);
