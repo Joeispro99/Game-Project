@@ -1,10 +1,2 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-Base path: '/Applications/Unity/Hub/Editor/2019.4.18f1/Unity.app/Contents', plugins path '/Applications/Unity/Hub/Editor/2019.4.18f1/PlaybackEngines'
-=======
 Base path: '/Applications/Unity/Unity.app/Contents', plugins path '/Applications/Unity/Unity.app/Contents/PlaybackEngines'
->>>>>>> Stashed changes
-=======
-Base path: '/Applications/Unity/Unity.app/Contents', plugins path '/Applications/Unity/Unity.app/Contents/PlaybackEngines'
->>>>>>> Stashed changes
 Cmd: initializeCompiler
