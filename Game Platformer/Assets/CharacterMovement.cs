@@ -19,6 +19,9 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private LayerMask ground;
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 7f;
+    [SerializeField] private SpriteRenderer checkpointSprite;
+    [SerializeField] private Transform checkpointTransform;
+    public Sprite flagRed;
     private void Start()
     {
         coll = GetComponent<Collider2D>();
@@ -30,7 +33,20 @@ public class CharacterMovement : MonoBehaviour
         if(collision.gameObject.tag == "Spike")
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
+            if(checkpointSprite.sprite == flagRed)
+        {
+            transform.position = new Vector3(checkpointTransform.position.x,checkpointTransform.position.y+1,checkpointTransform.position.z);
+            rb.velocity = new Vector2(0,0);
+        } else {
             SceneManager.LoadScene(currentSceneName);
+        }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Checkpoint")
+        {
+            checkpointSprite.sprite = flagRed;
         }
     }
     private void Update()
@@ -97,7 +113,13 @@ public class CharacterMovement : MonoBehaviour
         if(transform.position.y < -20)
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
+            if(checkpointSprite.sprite == flagRed)
+            {
+            transform.position = new Vector3(checkpointTransform.position.x,checkpointTransform.position.y,checkpointTransform.position.z);
+            rb.velocity = new Vector2(0,0);
+            } else {
             SceneManager.LoadScene(currentSceneName);
+            }
         }
         VelocityState();
         anim.SetInteger("state", (int)state);
