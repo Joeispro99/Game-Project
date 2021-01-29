@@ -519,7 +519,7 @@ SpriteRenderer:
   m_Size: {x: 12, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &657421983
@@ -749,6 +749,8 @@ GameObject:
   - component: {fileID: 1085345295}
   - component: {fileID: 1085345294}
   - component: {fileID: 1085345296}
+  - component: {fileID: 1085345298}
+  - component: {fileID: 1085345297}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -846,7 +848,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085345290}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -971,6 +973,48 @@ MonoBehaviour:
   checkpointSprite: {fileID: 1277959590}
   checkpointTransform: {fileID: 1277959591}
   flagRed: {fileID: 21300000, guid: bab5763b05cd4429d80fa805067a75b4, type: 3}
+--- !u!61 &1085345297
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085345290}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.3663888, y: 0.10991722}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.84, y: 3.84}
+    newSize: {x: 3.84, y: 3.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.6675577, y: 1.9103552}
+  m_EdgeRadius: 0
+--- !u!58 &1085345298
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085345290}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.31753618, y: -0.5373696}
+  serializedVersion: 2
+  m_Radius: 1.3582034
 --- !u!1 &1277959588
 GameObject:
   m_ObjectHideFlags: 0
