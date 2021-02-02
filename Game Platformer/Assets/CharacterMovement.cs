@@ -14,7 +14,7 @@ public class CharacterMovement : MonoBehaviour
     //To here
     private witchState state = witchState.idle;
     private Rigidbody2D rb;
-    private Collider2D coll;
+    [SerializeField] private Collider2D coll;
     private Animator anim;
     [SerializeField] private LayerMask ground;
     [SerializeField] private float speed = 5f;
@@ -24,7 +24,6 @@ public class CharacterMovement : MonoBehaviour
     public Sprite flagRed;
     private void Start()
     {
-        coll = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -51,6 +50,9 @@ public class CharacterMovement : MonoBehaviour
     }
     private void Update()
     {
+        if(coll.IsTouchingLayers(ground)) {
+            Debug.Log("Touching ground");
+        }
         float hdirection = Input.GetAxis("Horizontal");
 
         transform.rotation = new Quaternion((float)transform.rotation.x, (float)transform.rotation.y, 0f, (float)transform.rotation.w);
@@ -68,15 +70,23 @@ public class CharacterMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
-        //if (Input.GetButtonDown("Jump") || Input.GetKeyDown("w") && coll.IsTouchingLayers(ground))
-        //ur shitty code doesnt work
-        if (Input.GetButton("Jump") && coll.IsTouchingLayers(ground))
+        if ((Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground)) || (Input.GetKeyDown("w") && coll.IsTouchingLayers(ground)))
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);   
         }
         if (Input.GetAxis("Fire1") > 0) 
         {
             state = witchState.fire;
+            //experimental
+            // //wait 0.083s
+            // waitfor83milliseconds();
+            // if(anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1){  //If normalizedTime is 0 to 1 means animation is playing, if greater than 1 means finished
+            //     Debug.Log("not playing"); 
+            // }
+            // else{  
+            //     Debug.Log("playing");
+            //     state = witchState.idle;
+            // }
         }
         //Brayden did this
         /*
@@ -161,5 +171,11 @@ public class CharacterMovement : MonoBehaviour
             state = witchState.idle;
         }
     }
+    
+    // experimental
+    // private IEnumerator waitfor83milliseconds()
+    // {
+    //     yield return new WaitForSeconds(0.083f);
+    // }
     
 }
