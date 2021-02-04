@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: pixil-frame-0 (2)
+  m_Name: spike
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 1e579e0b3e6244a2aa736c0eb6f0866c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e173b87735e0c4d7ca7db973edc7c8ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
@@ -33,4 +33,4 @@ MonoBehaviour:
     e33: 1
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 1
-  m_ColliderType: 0
+  m_ColliderType: 1
