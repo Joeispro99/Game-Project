@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Spike
   - Checkpoint
+  - Ground
+  - Fireball
+  - Enemy
   layers:
   - Default
   - TransparentFX

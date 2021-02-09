@@ -34,12 +34,16 @@ public class CharacterMovement : MonoBehaviour
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
             if(checkpointSprite.sprite == flagRed)
-        {
-            transform.position = new Vector3(checkpointTransform.position.x,checkpointTransform.position.y+1,checkpointTransform.position.z);
-            rb.velocity = new Vector2(0,0);
-        } else {
-            SceneManager.LoadScene(currentSceneName);
+            {
+                transform.position = new Vector3(checkpointTransform.position.x,checkpointTransform.position.y+1,checkpointTransform.position.z);
+                rb.velocity = new Vector2(0,0);
+            } else {
+                SceneManager.LoadScene(currentSceneName);
+            }
         }
+        if(collision.gameObject.tag == "Enemy")
+        {
+            // insert knockback
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

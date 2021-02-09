@@ -11,6 +11,16 @@ public class AttackScript : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
     }
+    // private void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     Debug.Log("collided");
+    //     if(collision.gameObject.tag == "Spike")
+    //     {
+    //         Debug.Log("collided with ground");
+    //         GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
+    //         GetComponent<Rigidbody2D>().velocity = new Vector2(0f,0f);
+    //     }
+    // }
     private void Update()
     {
         if(character.state == CharacterMovement.witchState.fire)
@@ -29,7 +39,6 @@ public class AttackScript : MonoBehaviour
             {
                 if(fireballAnimationPlaying) break;
                 GetComponent<Animator>().Play("Fireball-Appear");
-                Debug.Log(fireballAnimationPlaying);
             } while (false);
             StartCoroutine(waitForAWhile());
         }
@@ -46,7 +55,7 @@ public class AttackScript : MonoBehaviour
                 GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x + 2f, GetComponent<Rigidbody2D>().velocity.y);
             } else if(characterTransform.localScale.x == -0.3f)
             {
-                GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x - 2f, GetComponent<Rigidbody2D>().velocity.y);
+                GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x - 2f, GetComponent<Rigidbody2D>().velocity.y);                
             }
         }
     }
