@@ -7,22 +7,16 @@ public class AttackScript : MonoBehaviour
     private bool fireballAnimationPlaying = false;
     [SerializeField] private CharacterMovement character;
     [SerializeField] private Transform characterTransform;
+    [SerializeField] private LayerMask ground;
     private void Awake()
     {
         GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
     }
-    // private void OnCollisionEnter2D(Collision2D collision)
-    // {
-    //     Debug.Log("collided");
-    //     if(collision.gameObject.tag == "Spike")
-    //     {
-    //         Debug.Log("collided with ground");
-    //         GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
-    //         GetComponent<Rigidbody2D>().velocity = new Vector2(0f,0f);
-    //     }
-    // }
     private void Update()
     {
+        // Debug.Log("collided with ground");
+        // GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
+        // GetComponent<Rigidbody2D>().velocity = new Vector2(0f,0f);
         if(character.state == CharacterMovement.witchState.fire)
         {
             if(characterTransform.localScale.x == 0.3f)
