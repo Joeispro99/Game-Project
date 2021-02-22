@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class attackcheck : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool attackdies = false;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(collision.gameObject.tag == "Fireball")
+        {
+            attackdies = true;
+        }
     }
 }

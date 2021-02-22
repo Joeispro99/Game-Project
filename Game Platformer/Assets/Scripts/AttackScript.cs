@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttackScript : MonoBehaviour
 {
     private bool fireballAnimationPlaying = false;
+    [SerializeField] private attackcheck attackcheck2;
     [SerializeField] private CharacterMovement character;
     [SerializeField] private Transform characterTransform;
     [SerializeField] private LayerMask ground;
@@ -19,7 +20,7 @@ public class AttackScript : MonoBehaviour
         // Debug.Log("collided with ground");
         // GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0f);
         // GetComponent<Rigidbody2D>().velocity = new Vector2(0f,0f);
-        if(pauseButton == false){
+        if(pauseButton.pause == false){
             if(character.state == CharacterMovement.witchState.fire)
             {
                 if(characterTransform.localScale.x == 0.3f)
@@ -39,6 +40,13 @@ public class AttackScript : MonoBehaviour
                 } while (false);
                 StartCoroutine(waitForAWhile());
             }
+        }
+        if(attackcheck2.attackdies == true)
+        {
+            GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,0f);
+            // add explode animation
+            // Destroy(gameObject);
+            attackcheck2.attackdies = false;
         }
     }
     IEnumerator waitForAWhile()

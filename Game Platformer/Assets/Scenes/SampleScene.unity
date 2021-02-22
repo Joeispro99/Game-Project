@@ -1228,12 +1228,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c67390d2a4a71492885cbab91d129238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackcheck2: {fileID: 1888314298}
   character: {fileID: 1085345296}
   characterTransform: {fileID: 1085345293}
   ground:
     serializedVersion: 2
     m_Bits: 256
-  pauseButton: {fileID: 0}
+  pauseButton: {fileID: 1375025313}
 --- !u!50 &1168140499
 Rigidbody2D:
   serializedVersion: 4
@@ -4251,6 +4252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdb7e2163c424261a9691cbfe500884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackdies: 0
 --- !u!1 &2127200312
 GameObject:
   m_ObjectHideFlags: 0
