@@ -312,6 +312,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: button1
+  playerrb: {fileID: 0}
+  petrb: {fileID: 0}
+  firerb: {fileID: 0}
 --- !u!4 &601561618
 Transform:
   m_ObjectHideFlags: 0
