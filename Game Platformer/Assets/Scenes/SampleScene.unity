@@ -2095,6 +2095,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1519624477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1519624478}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1519624478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519624477}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.033326, y: -2.3174386, z: -190.84312}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1650900622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,8 +2221,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650900622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.96, y: -0.89, z: 0}
-  m_LocalScale: {x: 1.3627446, y: 1.0891888, z: 1.0773786}
+  m_LocalPosition: {x: -7.96, y: -1.488, z: 0}
+  m_LocalScale: {x: 1.3627446, y: 1.2100464, z: 1.0773786}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2601,6 +2631,7 @@ GameObject:
   - component: {fileID: 1888314297}
   - component: {fileID: 1888314295}
   - component: {fileID: 1888314298}
+  - component: {fileID: 1888314299}
   m_Layer: 8
   m_Name: Foreground
   m_TagString: Ground
@@ -4009,6 +4040,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackdies: 0
+--- !u!114 &1888314299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888314291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f930e81ca0eb74af4ac452d6f52785ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassmiddle: {fileID: 11400000, guid: 9627a4a2975544d07ba44f39e1a9d323, type: 2}
+  grassfloating: {fileID: 11400000, guid: e31ac58f871da4c4b8593827867336e6, type: 2}
+  map: {fileID: 1888314294}
+  ct: {fileID: 1085345293}
 --- !u!1 &2127200312
 GameObject:
   m_ObjectHideFlags: 0
