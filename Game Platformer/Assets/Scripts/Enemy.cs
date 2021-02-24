@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
             health -= 1;
             if(health <= 0)
             {
-                GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,0f);
+                Destroy(gameObject);
             }
         }
     }

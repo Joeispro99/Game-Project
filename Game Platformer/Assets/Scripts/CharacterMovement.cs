@@ -18,6 +18,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private Collider2D coll;
     private Animator anim;
     [SerializeField] private LayerMask ground;
+    [SerializeField] private buttonScript pauseButton;
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 7f;
     [SerializeField] private SpriteRenderer checkpointSprite;
@@ -76,43 +77,32 @@ public class CharacterMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);   
         }
-        if (Input.GetAxis("Fire1") > 0) 
+        if(pauseButton.pause == false)
+        {
+            if(Input.GetAxis("Fire1") > 0)
         {
             state = witchState.fire;
             //throw new Exception("State has been changed");
             StartCoroutine(waitForAWhile());
         }
-        if(Input.GetAxis("Fire2") > 0)
-        {
+            if(Input.GetAxis("Fire2") > 0)
+            {
             state = witchState.lightning;
+            }
         }
         //Brayden did this
-        /*
+        
         if (Input.GetKeyDown("q"))
         {
-            if (FireOn == 0){
-                state = witchState.fire;
-                FireOn = 1;
-            }
-            else{
-                state = witchState.idle;
-                FireOn = 0;
-
-            }
+            state = witchState.fire;
+            //throw new Exception("State has been changed");
+            StartCoroutine(waitForAWhile());
         }
         if (Input.GetKeyDown("e"))
         {
-            if (LightOn == 0){
-                state = witchState.lightning;
-                LightOn = 1;
-            }
-            else{
-                state = witchState.idle;
-                LightOn = 0;
-
-            }
+            state = witchState.lightning;
         }
-        */
+        
         //to this (I wanted to make it so I could activate them)
         if(transform.position.y < -20)
         {
