@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class skyFollow : MonoBehaviour
 {
-    [SerializeField] private Transform characterTransform;
+    [SerializeField] private Rigidbody2D characterrb;
+    [SerializeField] private Transform charactertransform;
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(characterTransform.position.x, characterTransform.position.y, 0);
+        GetComponent<Rigidbody2D>().velocity = characterrb.velocity;
+    }
+    void LateUpdate()
+    {
+        //go back to original position every second
+        StartCoroutine(WaitForOneSecond());
+    }
+    private IEnumerator WaitForOneSecond()
+    {
+        yield return new WaitForSeconds(1
+        );
+        transform.position = new Vector3(charactertransform.position.x, charactertransform.position.y, charactertransform.position.z);
     }
 }

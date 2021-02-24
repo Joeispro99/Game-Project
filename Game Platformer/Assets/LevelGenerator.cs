@@ -10,11 +10,11 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] private Tilemap map;
     private Vector3 ctposition;
     [SerializeField] private Transform ct;
-    private void Update()
-    {
-        ctposition = new Vector3(ct.position.x, ct.position.y-1.5f, ct.position.z);
-        Vector3Int currentCell = map.WorldToCell(ctposition);
-        map.SetTile(currentCell,grassmiddle);
-    }
+    // private void Update()
+    // {
+    //     ctposition = new Vector3(ct.position.x, ct.position.y-1.5f, ct.position.z);
+    //     Vector3Int currentCell = map.WorldToCell(ctposition);
+    //     map.SetTile(currentCell,grassmiddle);
+    // }
     
 }
