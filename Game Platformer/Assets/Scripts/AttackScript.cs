@@ -23,6 +23,7 @@ public class AttackScript : MonoBehaviour
         if(pauseButton.pause == false){
             if(character.state == CharacterMovement.witchState.fire)
             {
+                // to be done: create clone
                 if(characterTransform.localScale.x == 0.3f)
                 {
                     transform.position = new Vector3(characterTransform.transform.position.x+1f, characterTransform.transform.position.y, characterTransform.transform.position.z);

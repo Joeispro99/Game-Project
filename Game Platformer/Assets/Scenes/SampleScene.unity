@@ -943,6 +943,7 @@ GameObject:
   - component: {fileID: 1085345296}
   - component: {fileID: 1085345298}
   - component: {fileID: 1085345297}
+  - component: {fileID: 1085345299}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -1210,6 +1211,22 @@ CircleCollider2D:
   m_Offset: {x: 0.31753618, y: -0.5373696}
   serializedVersion: 2
   m_Radius: 1.3582034
+--- !u!114 &1085345299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085345290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b767d0c9075b4080b65724b09c252e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameObjectToBeCloned: {fileID: 1085345290}
+  clonestomake: 0
+  GameObjectClone: {fileID: 0}
+  clones: 0
 --- !u!1 &1137125822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,6 +1307,7 @@ GameObject:
   - component: {fileID: 1168140498}
   - component: {fileID: 1168140499}
   - component: {fileID: 1168140500}
+  - component: {fileID: 1168140501}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Fireball
@@ -1481,6 +1499,22 @@ PolygonCollider2D:
       - {x: -0.41145834, y: 0.11979167}
       - {x: -0.2760417, y: 0.11979167}
       - {x: -0.2760417, y: 0.16145834}
+--- !u!114 &1168140501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168140494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b767d0c9075b4080b65724b09c252e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameObjectToBeCloned: {fileID: 1168140494}
+  clonestomake: 0
+  GameObjectClone: {fileID: 0}
+  clones: 0
 --- !u!1 &1277959588
 GameObject:
   m_ObjectHideFlags: 0
