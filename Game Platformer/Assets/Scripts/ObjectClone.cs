@@ -5,8 +5,8 @@ using UnityEngine;
 public class ObjectClone : MonoBehaviour
 {
     [SerializeField] private GameObject GameObjectToBeCloned;
-    public int clonestomake;
-    public GameObject GameObjectClone;
+    [SerializeField] private int clonestomake;
+    private GameObject GameObjectClone;
     public int clones = 0;
     public void Clone()
     {
@@ -18,5 +18,9 @@ public class ObjectClone : MonoBehaviour
             GameObjectClone.name = "" + clones;
             GameObjectClone.GetComponent<ObjectClone>().clones = clones;
         }
+    }
+    private void Start()
+    {
+        Clone();
     }
 }

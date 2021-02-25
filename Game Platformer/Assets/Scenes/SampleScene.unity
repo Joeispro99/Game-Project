@@ -1224,8 +1224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameObjectToBeCloned: {fileID: 1085345290}
-  clonestomake: 0
-  GameObjectClone: {fileID: 0}
+  clonestomake: 69
   clones: 0
 --- !u!1 &1137125822
 GameObject:
@@ -1513,7 +1512,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameObjectToBeCloned: {fileID: 1168140494}
   clonestomake: 0
-  GameObjectClone: {fileID: 0}
   clones: 0
 --- !u!1 &1277959588
 GameObject:
