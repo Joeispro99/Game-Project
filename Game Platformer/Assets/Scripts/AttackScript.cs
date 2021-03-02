@@ -44,7 +44,9 @@ public class AttackScript : MonoBehaviour
         }
         if(attackcheck2.attackdies == true)
         {
-            GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,0f);
+            GetComponent<Animator>().Play("Fireball-Explode");
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            StartCoroutine(waitForAWhile2());
             // add explode animation
             // Destroy(gameObject);
             attackcheck2.attackdies = false;
@@ -65,5 +67,11 @@ public class AttackScript : MonoBehaviour
                 GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x - 2f, GetComponent<Rigidbody2D>().velocity.y);                
             }
         }
+    }
+    IEnumerator waitForAWhile2()
+    {
+        yield return new WaitForSecondsRealtime(.6f);
+        GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,0f);
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
     }
 }
